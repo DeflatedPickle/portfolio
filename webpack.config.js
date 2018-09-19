@@ -24,6 +24,7 @@ module.exports = {
                     "style-loader",
                     MiniCssExtractPlugin.loader,
                     "css-loader",
+                    "postcss-loader",
                     "stylus-loader"
                 ]
             },
