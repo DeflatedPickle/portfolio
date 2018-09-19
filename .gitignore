@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Other files
+package-lock.json
+dist/
