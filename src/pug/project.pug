@@ -1,5 +1,6 @@
 mixin Project(projectLogo, projectName, projectDescription)
     div.project
-        // Image
+        if projectLogo
+            img(src=projectLogo)
         h3= projectName
         p= projectDescription
