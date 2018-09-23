@@ -69,3 +69,4 @@ gen
 # Other files
 assets/
 package-lock.json
+upload.py
