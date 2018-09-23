@@ -30,7 +30,7 @@ module.exports = {
             },
             {
                 test: /\.coffee$/,
-                use: ["coffee-loader", "babel-loader"]
+                use: ["babel-loader", "coffee-loader"]
             }
         ]
     },
