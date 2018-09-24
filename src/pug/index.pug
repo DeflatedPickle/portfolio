@@ -5,6 +5,8 @@ html
         meta(charset="UTF-8")
     body
         include project
+        include separator
+        a(id="top")
         div.main_projects
             .left
                 +Project("../../assets/owo.png", "Name", "Desc.")
@@ -13,6 +15,7 @@ html
             .left
                 +Project("../../assets/owo.png", "Name", "Desc.")
         include year_bar
+        +Separator("2018", true)
         +Project("", "Name", "Desc.")
         +Project("../../assets/owo.png", "Name", "Desc.")
         +Project("", "Name", "Desc.")
@@ -24,6 +27,7 @@ html
         +Project("../../assets/owo.png", "Name", "Desc.")
         +Project("../../assets/owo.png", "Name", "Desc.")
         +Project("../../assets/owo.png", "Name", "Desc.")
+        +Separator("2017", false)
         +Project("../../assets/owo.png", "Name", "Desc.")
         +Project("../../assets/owo.png", "Name", "Desc.")
         +Project("../../assets/owo.png", "Name", "Desc.")

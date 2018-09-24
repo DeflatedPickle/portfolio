@@ -1,0 +1,38 @@
+// https://css-tricks.com/line-on-sides-headers/
+
+@require "colours"
+
+@import url('https://fonts.googleapis.com/css?family=Arvo')
+
+.top_year
+  margin-bottom 72px
+
+.separator
+  text-align center
+
+  margin-top 15px
+  margin-bottom 5px
+
+  span
+    display inline-block
+    position relative
+
+    font-family 'Arvo', serif
+    font-size 150%
+
+    &:before, &:after
+      content ""
+      position absolute
+      height 13px
+      border-bottom 3px solid text
+      top 0
+      width 45vw
+
+    &:before
+      right 100%
+      margin-right 15px
+
+    &:after
+      left 100%
+      margin-left 15px
+

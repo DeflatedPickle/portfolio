@@ -1,0 +1,7 @@
+mixin Separator(id, at_top)
+    if at_top
+        div.top_year(id=id)
+    else
+        div(id=id)
+    div.separator
+        span= id
