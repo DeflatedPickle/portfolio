@@ -68,6 +68,17 @@
 
     filter opacity(0.9) drop-shadow(3px 3px 5px black)
 
+  .hiddenContent
+    background-color toolbar
+
+    bottom 0
+    position absolute
+    width 100%
+
+    margin-bottom 22px
+
+    border-top 3px solid text
+
   .expander
     background-color text
 
@@ -79,9 +90,18 @@
 
     text-align center
 
-    margin 0
-
     h3
       z-index 1
+      transform translateY(2px)
 
       color white
+
+      box-shadow none
+
+    &:hover
+      background-color textHover
+
+      cursor pointer
+
+.hidden
+  visibility hidden
