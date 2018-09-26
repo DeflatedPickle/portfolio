@@ -29,24 +29,17 @@
   -webkit-filter: drop-shadow(0 5px 5px #000);
           filter: drop-shadow(0 5px 5px #000);
 }
-.mainProject .expanderParent,
-.mainProjectLeft .expanderParent,
-.mainProjectRight .expanderParent,
-.main_projects .left .project .expanderParent,
-.main_projects .right .project .expanderParent {
-  bottom: auto;
-  bottom: initial;
-  height: 98%;
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-.mainProject .expanderParent .expander,
-.mainProjectLeft .expanderParent .expander,
-.mainProjectRight .expanderParent .expander,
-.main_projects .left .project .expanderParent .expander,
-.main_projects .right .project .expanderParent .expander {
+.mainProject .expander,
+.mainProjectLeft .expander,
+.mainProjectRight .expander,
+.main_projects .left .project .expander,
+.main_projects .right .project .expander {
   width: 32px;
   height: 100%;
+  bottom: auto;
+  bottom: initial;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .mainProject .hiddenContent,
 .mainProjectLeft .hiddenContent,
@@ -62,8 +55,8 @@
   grid-template-columns: 145px auto 32px 0;
   grid-template-rows: 30px auto 32px;
 }
-.mainProjectLeft .expanderParent,
-.main_projects .left .project .expanderParent {
+.mainProjectLeft .expander,
+.main_projects .left .project .expander {
   grid-column: 3;
 }
 .mainProjectLeft .hiddenContent,
@@ -93,8 +86,8 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.mainProjectRight .expanderParent,
-.main_projects .right .project .expanderParent {
+.mainProjectRight .expander,
+.main_projects .right .project .expander {
   grid-column: 2;
 }
 .mainProjectRight .hiddenContent,
@@ -154,13 +147,7 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
-.project .expanderParent {
-  width: 100%;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row: 3;
-}
-.project .expanderParent .expander {
+.project .expander {
   background-color: #c5e1a5;
   height: 32px;
   font-family: 'Arvo', serif;
@@ -168,8 +155,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
 }
-.project .expanderParent .expander:hover {
+.project .expander:hover {
   background-color: #aed581;
   cursor: pointer;
 }
