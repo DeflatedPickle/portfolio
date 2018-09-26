@@ -33,11 +33,11 @@ projectList.forEach( (value, key, parent) ->
         when "left"
           expander.textContent = ">"
           value.style.marginLeft = "7%"
-          value.style.gridTemplateColumns = "145px auto 32px 30%"
+          value.style.gridTemplateColumns = "145px auto 32px 60%"
         when "right"
           expander.textContent = "<"
           value.style.marginRight = "7%"
-          value.style.gridTemplateColumns = "30% 32px 145px auto"
+          value.style.gridTemplateColumns = "60% 32px 145px auto"
         when "bottom" then expander.textContent = "/\\"
 
     else
