@@ -11,8 +11,8 @@ projectList.forEach( (value, key, parent) ->
     if "hidden" in child.classList
       hidden = child
 
-    if "expanderParent" in child.classList
-      expander = child.childNodes[0]
+    if "expander" in child.classList
+      expander = child
       # hidden = child.childNodes[1]
 
   switch expanderPlacement
@@ -32,13 +32,13 @@ projectList.forEach( (value, key, parent) ->
       switch expanderPlacement
         when "left"
           expander.textContent = ">"
-          value.style.marginLeft = "5%"
+          value.style.marginLeft = "7%"
           value.style.gridTemplateColumns = "145px auto 32px 30%"
         when "right"
           expander.textContent = "<"
-          value.style.marginRight = "5%"
+          value.style.marginRight = "7%"
           value.style.gridTemplateColumns = "30% 32px 145px auto"
-        when "bottom" then expander.textContent = "\\/"
+        when "bottom" then expander.textContent = "/\\"
 
     else
       hidden.classList.add("hidden")
@@ -55,6 +55,6 @@ projectList.forEach( (value, key, parent) ->
           expander.textContent = ">"
           value.style.marginRight = "30%"
           value.style.gridTemplateColumns = "0 32px 145px auto"
-        when "bottom" then expander.textContent = "/\\"
+        when "bottom" then expander.textContent = "\\/"
 
   expander.onclick = -> expandFunc())

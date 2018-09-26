@@ -4,16 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo')
 
 .mainProject
-  .expanderParent
+  .expander
+    width 32px
+    height 100%
+
     bottom initial
-    height 98%
 
     grid-row-start 1
     grid-row-end 4
-
-    .expander
-      width 32px
-      height 100%
 
   .hiddenContent
     border-top none
@@ -28,7 +26,7 @@
   grid-template-columns 145px auto 32px 0
   grid-template-rows 30px auto 32px
 
-  .expanderParent
+  .expander
     grid-column 3
 
   .hiddenContent
@@ -58,7 +56,7 @@
     grid-row-start 1
     grid-row-end 3
 
-  .expanderParent
+  .expander
     grid-column 2
 
   .hiddenContent
@@ -145,9 +143,21 @@
     grid-row-start 1
     grid-row-end 3
 
-  .expanderParent
-    // bottom 0
-    // position absolute
+  .expander
+    background-color text
+
+    height 32px
+
+    // text-align center
+
+    font-family 'Arvo', serif
+
+    color white
+
+    display flex
+    justify-content center
+    align-items center
+
 
     width 100%
 
@@ -156,33 +166,18 @@
 
     grid-row 3
 
-    .expander
-      background-color text
+    // h3
+    //   z-index 1
+    //   transform translateY(2px)
 
-      height 32px
+    //   color white
 
-      // text-align center
+    //   box-shadow none
 
-      font-family 'Arvo', serif
+    &:hover
+      background-color textHover
 
-      color white
-
-      display flex
-      justify-content center
-      align-items center
-
-      // h3
-      //   z-index 1
-      //   transform translateY(2px)
-
-      //   color white
-
-      //   box-shadow none
-
-      &:hover
-        background-color textHover
-
-        cursor pointer
+      cursor pointer
 
   .hiddenContent
     background-color toolbar
