@@ -30,8 +30,14 @@ projectList.forEach( (value, key, parent) ->
       # value.style.height = value.scrollHeight / 1.5 + "px"
 
       switch expanderPlacement
-        when "left" then expander.textContent = ">"
-        when "right" then expander.textContent = "<"
+        when "left"
+          expander.textContent = ">"
+          value.style.marginLeft = "5%"
+          value.style.gridTemplateColumns = "145px auto 32px 30%"
+        when "right"
+          expander.textContent = "<"
+          value.style.marginRight = "5%"
+          value.style.gridTemplateColumns = "30% 32px 145px auto"
         when "bottom" then expander.textContent = "\\/"
 
     else
@@ -41,8 +47,14 @@ projectList.forEach( (value, key, parent) ->
       # value.style.height = hidden.scrollHeight * 3.5 + "px"
 
       switch expanderPlacement
-        when "left" then expander.textContent = "<"
-        when "right" then expander.textContent = ">"
+        when "left"
+          expander.textContent = "<"
+          value.style.marginLeft = "30%"
+          value.style.gridTemplateColumns = "145px auto 32px 0"
+        when "right"
+          expander.textContent = ">"
+          value.style.marginRight = "30%"
+          value.style.gridTemplateColumns = "0 32px 145px auto"
         when "bottom" then expander.textContent = "/\\"
 
   expander.onclick = -> expandFunc())
