@@ -15,10 +15,21 @@ projectList.forEach( (value, key, parent) ->
       expander = child
       # hidden = child.childNodes[1]
 
+  expanderText = expander.childNodes[0]
+
+  # TODO: Change the expander text to actual arrows
   switch expanderPlacement
-    when "left" then expander.textContent = "<"
-    when "right" then expander.textContent = ">"
-    when "bottom" then expander.textContent = "\\/"
+    when "left"
+      expanderText.textContent = "<"
+      expanderText.classList.add("left")
+
+    when "right"
+      expanderText.textContent = ">"
+      expanderText.classList.add("right")
+
+    when "bottom"
+      expanderText.textContent = "\\/"
+      expanderText.classList.add("bottom")
 
   expandFunc = ->
     if "hidden" in hidden.classList
@@ -31,14 +42,31 @@ projectList.forEach( (value, key, parent) ->
 
       switch expanderPlacement
         when "left"
-          expander.textContent = ">"
+          expanderText.textContent = ">"
+          expanderText.classList.remove("left")
+          expanderText.classList.add("right")
+
           value.style.marginLeft = "7%"
           value.style.gridTemplateColumns = "145px auto 32px 60%"
+
+          hidden.style.maxWidth = "100%"
+
         when "right"
-          expander.textContent = "<"
+          expanderText.textContent = "<"
+          expanderText.classList.remove("right")
+          expanderText.classList.add("left")
+
           value.style.marginRight = "7%"
           value.style.gridTemplateColumns = "60% 32px 145px auto"
-        when "bottom" then expander.textContent = "/\\"
+
+          hidden.style.maxWidth = "100%"
+
+        when "bottom"
+          expanderText.textContent = "/\\"
+          expanderText.classList.remove("bottom")
+          expanderText.classList.add("top")
+
+          hidden.style.maxHeight = hidden.scrollHeight + "px"
 
     else
       hidden.classList.add("hidden")
@@ -48,13 +76,30 @@ projectList.forEach( (value, key, parent) ->
 
       switch expanderPlacement
         when "left"
-          expander.textContent = "<"
+          expanderText.textContent = "<"
+          expanderText.classList.remove("right")
+          expanderText.classList.add("left")
+
           value.style.marginLeft = "30%"
           value.style.gridTemplateColumns = "145px auto 32px 0"
+
+          hidden.style.maxWidth = null
+
         when "right"
-          expander.textContent = ">"
+          expanderText.textContent = ">"
+          expanderText.classList.remove("left")
+          expanderText.classList.add("right")
+
           value.style.marginRight = "30%"
           value.style.gridTemplateColumns = "0 32px 145px auto"
-        when "bottom" then expander.textContent = "\\/"
+
+          hidden.style.maxWidth = null
+
+        when "bottom"
+          expanderText.textContent = "\\/"
+          expanderText.classList.remove("top")
+          expanderText.classList.add("bottom")
+
+          hidden.style.maxHeight = null
 
   expander.onclick = -> expandFunc())
