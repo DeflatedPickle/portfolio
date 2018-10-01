@@ -20,15 +20,15 @@ projectList.forEach( (value, key, parent) ->
   # TODO: Change the expander text to actual arrows
   switch expanderPlacement
     when "left"
-      expanderText.textContent = "<"
+      expanderText.textContent = "⯇"
       expanderText.classList.add("left")
 
     when "right"
-      expanderText.textContent = ">"
+      expanderText.textContent = "⯈"
       expanderText.classList.add("right")
 
     when "bottom"
-      expanderText.textContent = "\\/"
+      expanderText.textContent = "⯆"
       expanderText.classList.add("bottom")
 
   expandFunc = ->
@@ -42,7 +42,7 @@ projectList.forEach( (value, key, parent) ->
 
       switch expanderPlacement
         when "left"
-          expanderText.textContent = ">"
+          expanderText.textContent = "⯈"
           expanderText.classList.remove("left")
           expanderText.classList.add("right")
 
@@ -52,7 +52,7 @@ projectList.forEach( (value, key, parent) ->
           hidden.style.maxWidth = "100%"
 
         when "right"
-          expanderText.textContent = "<"
+          expanderText.textContent = "⯇"
           expanderText.classList.remove("right")
           expanderText.classList.add("left")
 
@@ -62,7 +62,7 @@ projectList.forEach( (value, key, parent) ->
           hidden.style.maxWidth = "100%"
 
         when "bottom"
-          expanderText.textContent = "/\\"
+          expanderText.textContent = "⯅"
           expanderText.classList.remove("bottom")
           expanderText.classList.add("top")
 
@@ -76,7 +76,7 @@ projectList.forEach( (value, key, parent) ->
 
       switch expanderPlacement
         when "left"
-          expanderText.textContent = "<"
+          expanderText.textContent = "⯇"
           expanderText.classList.remove("right")
           expanderText.classList.add("left")
 
@@ -86,7 +86,7 @@ projectList.forEach( (value, key, parent) ->
           hidden.style.maxWidth = null
 
         when "right"
-          expanderText.textContent = ">"
+          expanderText.textContent = "⯈"
           expanderText.classList.remove("left")
           expanderText.classList.add("right")
 
@@ -96,7 +96,7 @@ projectList.forEach( (value, key, parent) ->
           hidden.style.maxWidth = null
 
         when "bottom"
-          expanderText.textContent = "\\/"
+          expanderText.textContent = "⯆"
           expanderText.classList.remove("top")
           expanderText.classList.add("bottom")
 
