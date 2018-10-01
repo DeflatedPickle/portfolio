@@ -247,6 +247,8 @@ img:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-filter: drop-shadow(0 0 7px #000);
+          filter: drop-shadow(0 0 7px #000);
 }
 .hiddenContent {
   background-color: #263238;
@@ -272,6 +274,10 @@ img:hover {
   position: relative;
   font-family: 'Arvo', serif;
   font-size: 150%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .separator span:before,
 .separator span:after {
