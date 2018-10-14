@@ -246,7 +246,7 @@
 
     max-width 100%
     max-height 0
-    overflow hidden
+    overflow auto
 
     border-top 3px solid text
 
@@ -255,6 +255,28 @@
     grid-column-end 3
 
     transition max-height 0.2s ease
+
+    // TODO: Make the image list scroll horizontally
+    ol
+      margin 5px
+      padding 0
+
+      list-style-position inside
+
+      font-family 'Arvo', serif
+      font-size 150%
+
+      li
+        float left
+
+        transform translateY(10px)
+
+        img
+          display block
+          padding-left 5px
+          padding-right 18px
+
+          transform translateX(12px) translateY(-20px)
 
 // .hidden
 //   visibility hidden

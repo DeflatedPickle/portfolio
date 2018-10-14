@@ -1,4 +1,4 @@
-mixin Project(projectLogo, projectName, projectDescription)
+mixin Project(projectLogo, projectName, projectDescription, projectImages)
     div.project
         if projectLogo
             img(src=projectLogo)
@@ -9,4 +9,7 @@ mixin Project(projectLogo, projectName, projectDescription)
             h2.expanderText
 
         div(class="hiddenContent hidden")
-            h1 owo
+            ol
+                each img in projectImages
+                    li
+                        img(src=img)

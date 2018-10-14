@@ -17,15 +17,18 @@ projectList.forEach( (value, key, parent) ->
 
   expanderText = expander.childNodes[0]
 
-  # TODO: Change the expander text to actual arrows
   switch expanderPlacement
     when "left"
       expanderText.textContent = "⯇"
       expanderText.classList.add("left")
 
+      value.style.height = "180px"
+
     when "right"
       expanderText.textContent = "⯈"
       expanderText.classList.add("right")
+
+      value.style.height = "180px"
 
     when "bottom"
       expanderText.textContent = "⯆"
