@@ -8,8 +8,9 @@ mixin Project(projectLogo, projectName, projectDescription, projectImages)
         div.expander
             h2.expanderText
 
+        // TODO: Add image descriptions
         div(class="hiddenContent hidden")
             ol
                 each img in projectImages
                     li
-                        img(src=img)
+                        img(src=img).projectImage

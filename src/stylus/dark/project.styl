@@ -179,6 +179,8 @@
     grid-row-start 1
     grid-row-end 3
 
+    user-select none
+
     transition all 0.2s ease
 
     &:hover
@@ -276,7 +278,16 @@
           padding-left 5px
           padding-right 18px
 
+          transition all 0.2s ease
+
           transform translateX(12px) translateY(-20px)
+
+          user-select none
+
+          &:hover
+            cursor pointer
+
+            transform translateX(12px) translateY(-14px) scale(1.08)
 
 // .hidden
 //   visibility hidden
