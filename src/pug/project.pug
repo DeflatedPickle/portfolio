@@ -11,6 +11,7 @@ mixin Project(projectLogo, projectName, projectDescription, projectImages)
         // TODO: Add image descriptions
         div(class="hiddenContent hidden")
             ol
-                each img in projectImages
+                each data, name in projectImages
                     li
-                        img(src=img).projectImage
+                        img(src=data[0] alt=data[1]).projectImage
+                        p= name

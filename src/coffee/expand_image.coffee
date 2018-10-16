@@ -1,25 +1,32 @@
-images = document.getElementsByClassName("projectImage")
+images = document.querySelectorAll(".projectImage")
 
 isShown = false
 currentModal = null
 
-for img in images
-  deleteImage = ->
-    document.body.removeChild(currentModal)
-    isShown = false
+deleteImage = ->
+  document.body.removeChild(currentModal)
+  isShown = false
 
-  # FIXME: The new image is always a clone of the last image created
-  showImage = ->
-    currentModal = document.createElement("modal")
-    currentModal.classList.add("imageModal")
-    document.body.appendChild(currentModal)
+showImage =(image, description) ->
+  currentModal = document.createElement("modal")
+  currentModal.classList.add("imageModal")
+  document.body.appendChild(currentModal)
 
-    currentModal.onclick = -> deleteImage()
+  currentModal.onclick = -> deleteImage()
 
-    new_image = img.cloneNode()
-    new_image.classList.remove("projectImage")
-    currentModal.appendChild(new_image)
+  contentDiv = document.createElement("div")
 
-    isShown = true
+  imageElement = document.createElement("img")
+  imageElement.src = image
+  contentDiv.appendChild(imageElement)
 
-  img.onclick = -> showImage()
+  descriptionElement = document.createElement("p")
+  descriptionElement.textContent = description
+  contentDiv.appendChild(descriptionElement)
+
+  currentModal.appendChild(contentDiv)
+
+  isShown = true
+
+images.forEach((value, key, parent) ->
+  value.onclick = -> showImage(value.src, value.alt))

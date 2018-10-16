@@ -1,6 +1,6 @@
 projectList = document.querySelectorAll(".project")
 
-projectList.forEach( (value, key, parent) ->
+projectList.forEach((value, key, parent) ->
   expanderPlacement = undefined
   switch value.parentElement.classList[0]
     when "left" then expanderPlacement = "left"

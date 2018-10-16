@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo')
 
 .mainProject
-  transition margin 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease
+  transition margin 0.2s ease, transform 0.4s ease-in-out, box-shadow 0.2s ease
 
   .expander
     width 32px
@@ -97,6 +97,8 @@
       &:hover
         box-shadow 6px 6px 15px black
 
+        transform translateX(10px)
+
   .right
     .project
       @extend .mainProjectRight
@@ -109,6 +111,8 @@
 
       &:hover
         box-shadow -6px 6px 15px black
+
+        transform translateX(-10px)
 
 .project
   background-color panel
@@ -268,6 +272,8 @@
       font-family 'Arvo', serif
       font-size 150%
 
+      transform translateY(-14px)
+
       li
         float left
 
@@ -288,6 +294,11 @@
             cursor pointer
 
             transform translateX(12px) translateY(-14px) scale(1.08)
+
+        p
+          transform translateX(20px) translateY(-18px)
+
+          font-size 60%
 
 // .hidden
 //   visibility hidden
