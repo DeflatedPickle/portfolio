@@ -46,9 +46,9 @@
 .mainProjectRight,
 .main_projects .left .project,
 .main_projects .right .project {
-  transition: margin 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease;
-  transition: margin 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  transition: margin 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+  transition: margin 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.4s ease-in-out;
+  transition: margin 0.2s ease, transform 0.4s ease-in-out, box-shadow 0.2s ease;
+  transition: margin 0.2s ease, transform 0.4s ease-in-out, box-shadow 0.2s ease, -webkit-transform 0.4s ease-in-out;
 }
 .mainProject .expander,
 .mainProjectLeft .expander,
@@ -148,17 +148,21 @@
 }
 .main_projects .left .project {
   margin: 30px 5% 30px 30%;
-  box-shadow: 3px 3px 10px 5px #000;
+  box-shadow: 3px 3px 15px #000;
 }
 .main_projects .left .project:hover {
-  box-shadow: 3px 6px 10px 7px #000;
+  box-shadow: 6px 6px 15px #000;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 .main_projects .right .project {
   margin: 30px 30% 30px 5%;
-  box-shadow: -3px 3px 10px 5px #000;
+  box-shadow: -3px 3px 15px #000;
 }
 .main_projects .right .project:hover {
-  box-shadow: -3px 6px 10px 7px #000;
+  box-shadow: -6px 6px 15px #000;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 .project {
   background-color: #455a64;
@@ -202,6 +206,10 @@ img {
   grid-column: 1;
   grid-row-start: 1;
   grid-row-end: 3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   transition: all 0.2s ease;
 }
 img:hover {
@@ -247,19 +255,53 @@ img:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-filter: drop-shadow(0 0 7px #000);
-          filter: drop-shadow(0 0 7px #000);
 }
 .hiddenContent {
   background-color: #263238;
   max-width: 100%;
   max-height: 0;
-  overflow: hidden;
+  overflow: auto;
   border-top: 3px solid #c5e1a5;
   grid-row: 4;
   grid-column-start: 1;
   grid-column-end: 3;
   transition: max-height 0.2s ease;
+}
+.hiddenContent ol {
+  margin: 5px;
+  padding: 0;
+  list-style-position: inside;
+  font-family: 'Arvo', serif;
+  font-size: 150%;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
+}
+.hiddenContent ol li {
+  float: left;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.hiddenContent ol li img {
+  display: block;
+  padding-left: 5px;
+  padding-right: 18px;
+  transition: all 0.2s ease;
+  -webkit-transform: translateX(12px) translateY(-20px);
+          transform: translateX(12px) translateY(-20px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hiddenContent ol li img:hover {
+  cursor: pointer;
+  -webkit-transform: translateX(12px) translateY(-14px) scale(1.08);
+          transform: translateX(12px) translateY(-14px) scale(1.08);
+}
+.hiddenContent ol li p {
+  -webkit-transform: translateX(20px) translateY(-18px);
+          transform: translateX(20px) translateY(-18px);
+  font-size: 60%;
 }
 .top_year {
   margin-bottom: 72px;
@@ -295,6 +337,29 @@ img:hover {
 .separator span:after {
   left: 100%;
   margin-left: 15px;
+}
+.imageModal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.imageModal div {
+  z-index: 1;
+  display: inline-block;
+  margin: 15% auto;
+  padding: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 body {
   background-color: #37474f;
