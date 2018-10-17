@@ -228,8 +228,11 @@ h3 {
 .infoBar .completed {
   background-color: #90ee90;
 }
-.infoBar .dropped {
+.infoBar .discontinued {
   background-color: #f08080;
+}
+.infoBar .replaced {
+  background-color: #ff69b4;
 }
 .infoBar .development {
   background-color: #5f9ea0;
