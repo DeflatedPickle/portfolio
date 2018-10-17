@@ -1,8 +1,10 @@
-mixin Project(projectLogo, projectName, projectDescription, projectImages)
+mixin Project(projectLogo, projectName, projectLink, projectDescription, projectImages)
     div.project
         if projectLogo
             img(src=projectLogo)
         h3= projectName
+        if projectLink
+            a(href=projectLink).projectLink Website
         p= projectDescription
 
         // if Object.keys(projectImages).length > 0
