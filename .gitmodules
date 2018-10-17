@@ -1,0 +1,6 @@
+[submodule "assets/koi/icons"]
+	path = assets/koi/icons
+	url = https://github.com/koi-lang/icons
+[submodule "assets/swine/assets"]
+	path = assets/swine/assets
+	url = https://github.com/SwineProject/assets
