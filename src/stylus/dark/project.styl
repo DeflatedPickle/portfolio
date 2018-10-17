@@ -171,18 +171,28 @@
     grid-column 2
 
   .infoBar
-    display inline-block
+    display table
+
+    height 26px
 
     grid-row 3
     grid-column 2
 
     .state
+      display table-cell
 
       box-shadow initial
 
       color white
 
       user-select none
+
+      transition all 0.2s ease-in-out
+
+      margin 0
+
+      &:hover
+        width 50%
 
     .completed
       background-color lightgreen
