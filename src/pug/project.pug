@@ -5,13 +5,14 @@ mixin Project(projectLogo, projectName, projectDescription, projectImages)
         h3= projectName
         p= projectDescription
 
-        div.expander
-            h2.expanderText
+        // if Object.keys(projectImages).length > 0
+        if projectImages
+            div.expander
+                h2.expanderText
 
-        // TODO: Add image descriptions
-        div(class="hiddenContent hidden")
-            ol
-                each data, name in projectImages
-                    li
-                        img(src=data[0] alt=data[1]).projectImage
-                        p= name
+            div(class="hiddenContent hidden")
+                ol
+                    each data, name in projectImages
+                        li
+                            img(src=data[0] alt=data[1]).projectImage
+                            p= name

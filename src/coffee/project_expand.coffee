@@ -15,6 +15,9 @@ projectList.forEach((value, key, parent) ->
       expander = child
       # hidden = child.childNodes[1]
 
+  if expander is undefined
+    return
+
   expanderText = expander.childNodes[0]
 
   switch expanderPlacement
@@ -23,12 +26,14 @@ projectList.forEach((value, key, parent) ->
       expanderText.classList.add("left")
 
       value.style.height = "180px"
+      value.style.gridTemplateColumns = "145px auto 32px 0"
 
     when "right"
       expanderText.textContent = "⯈"
       expanderText.classList.add("right")
 
       value.style.height = "180px"
+      value.style.gridTemplateColumns = "0 32px 145px auto"
 
     when "bottom"
       expanderText.textContent = "⯆"
