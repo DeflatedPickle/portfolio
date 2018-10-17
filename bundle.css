@@ -99,7 +99,7 @@
 }
 .mainProjectLeft,
 .main_projects .left .project {
-  grid-template-columns: 145px auto 32px 0;
+  grid-template-columns: 145px auto 0 0;
   grid-template-rows: 30px auto 32px;
 }
 .mainProjectLeft .expander,
@@ -113,7 +113,7 @@
 }
 .mainProjectRight,
 .main_projects .right .project {
-  grid-template-columns: 0 32px 145px auto;
+  grid-template-columns: 0 0 145px auto;
   grid-template-rows: 30px auto 32px;
 }
 .mainProjectRight h3,
@@ -181,7 +181,7 @@
 }
 h3 {
   display: inline-block;
-  width: 100px;
+  width: 30%;
   font-family: 'Arvo', serif;
   box-shadow: inset 0 -2px 0 #c5e1a5;
   padding-left: 3px;
@@ -210,6 +210,9 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
   transition: all 0.2s ease;
 }
 img:hover {
