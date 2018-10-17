@@ -1,4 +1,4 @@
-mixin Project(projectLogo, projectName, projectLink, projectDescription, projectImages)
+mixin Project(projectLogo, projectName, projectLink, projectDescription, projectState, projectType, projectImages)
     div.project
         if projectLogo
             img(src=projectLogo)
@@ -6,6 +6,10 @@ mixin Project(projectLogo, projectName, projectLink, projectDescription, project
         if projectLink
             a(href=projectLink).projectLink Website
         p= projectDescription
+
+        div.infoBar
+            h3(class="state " + projectState.toLowerCase())= projectState
+            h3(class="state " + projectType.toLowerCase())= projectType
 
         // if Object.keys(projectImages).length > 0
         if projectImages
