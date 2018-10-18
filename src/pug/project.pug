@@ -21,9 +21,8 @@ mixin Project(projectLogo, projectName, projectLink, projectDescription, project
                 if projectLibraries
                     h3.libs Libraries:
                     div.projectLibraries
-                        each lang in projectLibraries
-                            // TODO: Make the libraries change background colour based on the hash
-                            h3(class="lib " + lang.toLowerCase())= lang
+                        each lib in projectLibraries
+                            h3(class="lib " + lib.toLowerCase())= lib
 
         div.infoBar
             h3(class="state " + projectState.toLowerCase())= projectState
