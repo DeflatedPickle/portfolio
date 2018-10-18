@@ -45,6 +45,12 @@
     grid-row 3
     grid-column 2
 
+  .projectTools
+    grid-row 4
+
+    grid-column-start 1
+    grid-column-end 3
+
   .expander
     grid-column 3
 
@@ -64,9 +70,27 @@
     grid-row 1
     grid-column 4
 
+  .toolsButton
+    grid-row 3
+    grid-column 3
+
   .infoBar
     grid-row 3
     grid-column 4
+
+  .projectTools
+    grid-row 4
+
+    grid-column-start 3
+    grid-column-end 5
+
+  .langs
+    grid-row 1
+    grid-column 1
+
+  .libs
+    grid-row 2
+    grid-column 1
 
   .projectLink
     grid-row 1
@@ -175,6 +199,8 @@
 
     height 26px
 
+    padding-top 3px
+
     grid-row 3
     grid-column 2
 
@@ -187,12 +213,14 @@
 
       user-select none
 
-      transition all 0.2s ease-in-out
+      transition width 0.2s ease-in-out, filter 0.2s ease
 
       margin 0
 
       &:hover
         width 50%
+
+        filter brightness(95%)
 
     .completed
       background-color lightgreen
@@ -214,6 +242,106 @@
 
     .demonstration
       background-color lightsalmon
+
+  .toolsButton
+    display inline-block
+
+    box-shadow initial
+
+    background-color cornflowerblue
+    color white
+
+    width 135px
+
+    user-select none
+
+    text-align center
+
+    cursor pointer
+
+    grid-row 3
+    grid-column 1
+
+    transition all 0.4s ease
+
+    &:hover
+      filter brightness(90%)
+
+    &:hover + .projectTools
+      max-height 100px
+
+  .projectTools
+    display grid
+
+    grid-row 4
+
+    grid-column-start 1
+    grid-column-end 3
+
+    grid-template-columns 120px auto
+
+    user-select none
+
+    max-height 0
+
+    transition all 0.4s ease-in-out
+
+    &:hover
+      max-height 100px
+
+    h3
+      display table-cell
+
+      box-shadow initial
+
+      background-color dodgerblue
+      color white
+
+    .projectLanguages
+      grid-row 1
+      grid-column 2
+
+    .projectLibraries
+      grid-row 2
+      grid-column 2
+
+    .projectLanguages, .projectLibraries
+      display table
+
+      h3
+        display table-cell
+
+        height 26px
+
+        padding-top 3px
+
+        box-shadow initial
+
+        background-color orange
+        color white
+
+        transition width 0.2s ease-in-out, filter 0.2s ease
+
+        &:hover
+          filter brightness(95%)
+
+          width 50%
+
+    .langs, .libs
+      text-align right
+
+      width 110px
+
+      margin-top 0
+      margin-bottom 0
+
+    .langs
+      grid-row 1
+      grid-column 1
+
+    .libs
+      grid-row 2
+      grid-column 1
 
   .projectLink
     display inline-block

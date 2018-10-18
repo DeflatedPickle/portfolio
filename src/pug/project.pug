@@ -1,24 +1,42 @@
-mixin Project(projectLogo, projectName, projectLink, projectDescription, projectState, projectType, projectImages)
+mixin Project(projectLogo, projectName, projectLink, projectDescription, projectState, projectType, projectImages, projectLanguages, projectLibraries)
     div.project
         if projectLogo
             img(src=projectLogo)
-        h3= projectName
+        h3.name= projectName
         if projectLink
             a(href=projectLink).projectLink Website
-        p= projectDescription
+        p.description= projectDescription
+
+        if projectLanguages || projectLibraries
+            h3.toolsButton Tools Used
+
+            div.projectTools
+                if projectLanguages
+                    h3.langs Languages:
+                    div.projectLanguages
+                        each lang in projectLanguages
+                            // TODO: Make the languages change background colour based on the GitHub colours
+                            h3(class="lang " + lang.toLowerCase())= lang
+
+                if projectLibraries
+                    h3.libs Libraries:
+                    div.projectLibraries
+                        each lang in projectLibraries
+                            // TODO: Make the libraries change background colour based on the hash
+                            h3(class="lib " + lang.toLowerCase())= lang
 
         div.infoBar
             h3(class="state " + projectState.toLowerCase())= projectState
             h3(class="state " + projectType.toLowerCase())= projectType
 
-        // if Object.keys(projectImages).length > 0
         if projectImages
-            div.expander
-                h2.expanderText
+            if Object.keys(projectImages).length > 0
+                div.expander
+                    h2.expanderText
 
-            div(class="hiddenContent hidden")
-                ol
-                    each data, name in projectImages
-                        li
-                            img(src=data[0] alt=data[1]).projectImage
-                            p= name
+                div(class="hiddenContent hidden")
+                    ol
+                        each data, name in projectImages
+                            li
+                                img(src=data[0] alt=data[1]).projectImage
+                                p= name
