@@ -16,7 +16,7 @@ mixin Project(projectLogo, projectName, projectLink, projectDescription, project
                     div.projectLanguages
                         each lang in projectLanguages
                             // TODO: Make the languages change background colour based on the GitHub colours
-                            h3(class="lang " + lang.toLowerCase())= lang
+                            h3(class="lang " + lang)= lang
 
                 if projectLibraries
                     h3.libs Libraries:
