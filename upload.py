@@ -5,8 +5,6 @@ import sys
 
 import colorama
 
-from .setup import setup_colours
-
 
 def red(text):
     return colorama.Fore.RED + text + colorama.Style.RESET_ALL
@@ -18,8 +16,6 @@ def green(text):
 
 if __name__ == "__main__":
     colorama.init()
-
-    setup_colours()
 
     if not shutil.which("git"):
         print(red("Git could not be found, exiting"))
