@@ -348,16 +348,35 @@
   .projectLink
     display inline-block
 
-    font-family 'Poppins', sans-serif
+    margin-left auto
+    margin-right 0
 
-    text-align right
+    text-align center
 
     outline 0
 
-    user-select none
+    border solid
+
+    color text
+    background-color back
+
+    text-decoration none
+
+    font-family 'Hind', sans-serif
+
+    width 70px
 
     grid-row 1
     grid-column 2
+
+    transition transform 0.1s ease, color 0.2s ease
+
+    user-select none
+
+    &:hover
+      color textHover
+
+      transform translate(-4px) scaleX(1.1)
 
   p
     font-family 'Poppins', sans-serif
