@@ -223,6 +223,7 @@
 }
 h3 {
   display: inline-block;
+  white-space: nowrap;
   width: 30%;
   font-family: 'Arvo', serif;
   box-shadow: inset 0 -2px 0 #c5e1a5;
@@ -373,15 +374,30 @@ h3 {
 }
 .projectLink {
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: center;
   outline: 0;
+  border: solid;
+  color: #c5e1a5;
+  background-color: #37474f;
+  text-decoration: none;
+  font-family: 'Hind', sans-serif;
+  width: 70px;
+  grid-row: 1;
+  grid-column: 2;
+  transition: color 0.2s ease, -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease, color 0.2s ease;
+  transition: transform 0.1s ease, color 0.2s ease, -webkit-transform 0.1s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  grid-row: 1;
-  grid-column: 2;
+}
+.projectLink:hover {
+  color: #aed581;
+  -webkit-transform: translate(-4px) scaleX(1.1);
+          transform: translate(-4px) scaleX(1.1);
 }
 p {
   font-family: 'Poppins', sans-serif;
@@ -499,6 +515,16 @@ img:hover {
   -webkit-transform: translateX(20px) translateY(-18px);
           transform: translateX(20px) translateY(-18px);
   font-size: 60%;
+}
+.other_projects .project {
+  margin: 10px auto;
+  width: 70%;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -25px 0 15px rgba(0,0,0,0.5), 25px 0 15px rgba(0,0,0,0.5);
+}
+.other_projects .project:hover {
+  width: 80%;
+  box-shadow: -10px 0 15px -5px rgba(0,0,0,0.5), 10px 0 15px -5px rgba(0,0,0,0.5);
 }
 .top_year {
   margin-bottom: 72px;
