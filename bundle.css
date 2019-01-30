@@ -440,7 +440,7 @@ p {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row: 4;
+  grid-row: 5;
   transition: background-color 0.3s ease, -webkit-transform 0.1s ease;
   transition: transform 0.1s ease, background-color 0.3s ease;
   transition: transform 0.1s ease, background-color 0.3s ease, -webkit-transform 0.1s ease;
@@ -475,7 +475,7 @@ p {
   max-height: 0;
   overflow: auto;
   border-top: 3px solid #c5e1a5;
-  grid-row: 5;
+  grid-row: 6;
   grid-column-start: 1;
   grid-column-end: 3;
   transition: max-height 0.2s ease;
