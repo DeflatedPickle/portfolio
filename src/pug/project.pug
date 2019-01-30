@@ -1,7 +1,7 @@
 mixin Project(projectLogo, projectName, projectLink, projectDescription, projectState, projectType, projectImages, projectLanguages, projectLibraries)
     div.project
         if projectLogo
-            img(src=projectLogo)
+            img(src=projectLogo).projectIcon
         h3.name= projectName
         if projectLink
             a(href=projectLink).projectLink Website

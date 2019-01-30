@@ -4,3 +4,6 @@
 [submodule "assets/swine/assets"]
 	path = assets/swine/assets
 	url = https://github.com/SwineProject/assets
+[submodule "assets/blame"]
+	path = assets/blame
+	url = https://github.com/DeflatedPickle/blame
