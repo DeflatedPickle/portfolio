@@ -7,3 +7,6 @@
 [submodule "assets/blame"]
 	path = assets/blame
 	url = https://github.com/DeflatedPickle/blame
+[submodule "assets/Colony"]
+	path = assets/Colony
+	url = https://github.com/DeflatedPickle/Colony
