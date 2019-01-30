@@ -33,7 +33,7 @@ module.exports = {
                 use: ["babel-loader", "coffee-loader"]
             },
             {
-                test: /\.png$/,
+                test: /\.(gif|png)$/,
                 loader: "file-loader"
             }
         ]
