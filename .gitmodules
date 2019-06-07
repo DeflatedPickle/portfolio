@@ -10,3 +10,6 @@
 [submodule "assets/Colony"]
 	path = assets/Colony
 	url = https://github.com/DeflatedPickle/Colony
+[submodule "assets/FAOSDance"]
+	path = assets/FAOSDance
+	url = https://github.com/DeflatedPickle/FAOSDance
