@@ -1,1 +1,1 @@
-style = require("../stylus/dark.styl")
+require("../stylus/dark/index.styl")

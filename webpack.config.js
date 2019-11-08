@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -24,16 +25,27 @@ module.exports = {
                     "style-loader",
                     MiniCssExtractPlugin.loader,
                     "css-loader",
+                    "postcss-loader",
                     "stylus-loader"
                 ]
             },
             {
                 test: /\.coffee$/,
-                use: ["coffee-loader", "babel-loader"]
+                use: [
+                    "coffee-loader",
+                    "babel-loader"
+                ]
+            },
+            {
+                test: /\.(gif|png)$/,
+                loader: "file-loader"
             }
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+        }),
         new HtmlWebpackPlugin({
             minify: {
                 collapseWhitespace: true

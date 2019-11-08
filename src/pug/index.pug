@@ -2,4 +2,15 @@ doctype html
 html
     head
         title="DeflatedPickle - Portfolio"
+        meta(charset="UTF-8")
+
+        script(async data-href="https://github.com/DeflatedPickle/portfolio" data-target="_blank" src="https://unpkg.com/github-corners@latest/dist/embed.min.js")
+
+        script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js")
     body
+        include project
+
+        div(data-isotope='{ "itemSelector": ".project", "masonry": { "gutter": 20 } }')#projectGroup
+            +Project("Rawky", "A pixel art editor.")
+            +Project("Logalizer", "A program to analyze generic log files.")
+            +Project("fishsuck", "It's a physics engine.")
