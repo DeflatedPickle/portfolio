@@ -3,9 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300&display=swap')
 
 .project {
+  position relative
   display inline-grid
 
-  grid-template-areas "icon name" "desc desc"
+  grid-template-areas "icon name" "desc desc" "type type"
   grid-template-rows 30px auto
   grid-template-columns 20px auto
   align-content stretch
@@ -28,6 +29,8 @@
   box-shadow 0 4px lowOpacityBlack
 
   &:hover {
+    z-index 1
+
     transition-timing-function: ease-in;
     transition 0.2s
 
@@ -51,5 +54,23 @@
   .desc {
     font-family 'Roboto', sans-serif
     grid-area desc
+  }
+
+  .type {
+    font-family 'Roboto', sans-serif
+    grid-area type
+
+    justify-self center
+    align-self center
+
+    background-color toolbar
+    text-align center
+
+    width 100%
+    margin 0
+    padding 4px
+
+    position: absolute;
+    bottom: 0;
   }
 }
