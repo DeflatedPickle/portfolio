@@ -22,10 +22,23 @@ html
                 option Python
                 option Kotlin
                 option D
-                option Raku
+                option Perl 6
                 option TypeScript
+                option Rust
+                option C++
+                option C
 
         div#projectGroup
-            +Project("Rawky", "A pixel art editor.")("nine Kotlin")
-            +Project("Logalizer", "A program to analyze generic log files.")("nine TypeScript")
-            +Project("fishsuck", "It's a physics engine.")("nine D")
+            +Project("Rawky", "A pixel editor, with layers, animation frames, tools bound to different mouse buttons, onion skinning and an action history.", "https://github.com/DeflatedPickle/Rawky")("nine kt")
+            +Project("Logalyzer", "A web app that uses a RegEx pattern to extract text line-by-line from a text file.", "https://github.com/DeflatedPickle/Logalyzer")("nine ts")
+            +Project("fishsuck", "An easy physics engine meant for games and simulations, inspired by Chipmunk2D.")("nine d")
+            +Project("swine", "A game engine originally written in Python, then rewritten in Rust to work with Python. It uses scenes, objects and components.")("seven eight nine rs")
+            +Project("pkinter", "A widget library for Tkinter with some nice widgets.")("six seven eight nine py")
+            +Project("blame", "A simple terminal widget library based loosely on Tk.")("eight nine cpp")
+            +Project("whoosh", "A colourful terminal shell.")("nine pl6")
+            +Project("OpenSpy32", "An inspector for Windows, with some ability to tweak values.")("nine kt")
+            +Project("crisis", "A basic even library.")("eight nine cpp")
+            +Project("Koi", "A general purpose, object-oriented language, inspired by Kotlin and Perl 5, that compiles to C.")("eight nine py c")
+
+        div#gitbar
+            a(href="https://github.com/DeflatedPickle") Find More Of My Projects On GitHub

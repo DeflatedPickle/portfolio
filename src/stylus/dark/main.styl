@@ -1,5 +1,20 @@
 @require "colours"
 
-body
+body {
   background-color back
   color text
+
+  user-select none
+}
+
+a {
+  color text
+
+  &:hover {
+    color textHover
+  }
+
+  &:visited {
+    color textVisited
+  }
+}
