@@ -1,6 +1,6 @@
 @require "colours"
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300&display=swap')
 
 .project {
   display inline-grid
@@ -17,11 +17,15 @@
 
   padding 4px
 
-  transition transform 0.2s ease-in
+  transition-timing-function: ease-out;
+  transition 0.25s
 
   box-shadow 0 4px lowOpacityBlack
 
   &:hover {
+    transition-timing-function: ease-in;
+    transition 0.2s
+
     transform scale(1.08)
   }
 

@@ -1,0 +1,61 @@
+@require "colours"
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300&display=swap')
+
+#sortbar {
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  justify-content center
+  align-items center
+
+  background-color toolbar
+
+  height 40px
+
+  margin-bottom 10px
+
+  a, .chosen-container {
+    margin 2px
+  }
+
+  .chosen-drop {
+    box-shadow 0 4px lowOpacityBlack
+  }
+
+  .chosen-choices, .active-result {
+    background-image none
+    background-color panel
+  }
+
+  .search-choice, .highlighted {
+    background-image none
+    box-shadow none
+    border-radius 0
+    background-color panelHighlight
+  }
+
+  .result-selected {
+    background-image none
+    background-color back
+  }
+
+  .chosen-container {
+    .chosen-search-input, .active-result {
+      font-family 'Roboto', sans-serif
+      color text
+    }
+
+    .result-selected {
+      font-family 'Roboto', sans-serif
+      color textHover
+    }
+
+    .search-choice {
+      span {
+        font-family 'Roboto', sans-serif
+        color text
+      }
+    }
+  }
+}

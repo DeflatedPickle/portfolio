@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     target: "node",
-    entry: "./src/coffee/index.coffee",
+    entry: "./src/ts/index.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
@@ -30,9 +30,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.tsx?$/,
+                use: ["babel-loader", "ts-loader"],
+                exclude: /node_modules/
+            },
+            {
                 test: /\.coffee$/,
                 use: [
-                    "coffee-loader",
+                    "ts-loader",
                     "babel-loader"
                 ]
             },
@@ -44,7 +49,8 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
-            $: 'jquery'
+            $: 'jquery',
+            jQuery: 'jquery'
         }),
         new HtmlWebpackPlugin({
             minify: {
@@ -59,6 +65,6 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: [".coffee", ".js"]
+        extensions: [ '.tsx', '.ts', ".coffee", ".js" ]
     }
 };

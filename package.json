@@ -1,16 +1,23 @@
 {
-  "main": "src/coffee/index.coffee",
+  "main": "src/ts",
   "dependencies": {
+    "@types/chosen-js": "^1.8.1",
+    "@types/isotope-layout": "^3.0.8",
+    "@types/jquery": "^3.3.31",
+    "@types/node": "^12.12.7",
     "autoprefixer": "latest",
+    "chosen-js": "^1.8.7",
     "coffeescript": "^2.3.1",
     "core-js": "^3.4.0",
     "github-corners": "^0.1.0",
+    "isotope": "^1.0.0-alpha.3",
     "isotope-fit-columns": "^1.1.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
     "precss": "latest",
     "pug": "^2.0.3",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -27,6 +34,7 @@
     "pug-html-loader": "^1.1.5",
     "style-loader": "^0.23.0",
     "stylus-loader": "^3.0.2",
+    "ts-loader": "^6.2.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0"
   },

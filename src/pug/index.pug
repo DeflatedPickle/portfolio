@@ -7,10 +7,25 @@ html
         script(async data-href="https://github.com/DeflatedPickle/portfolio" data-target="_blank" src="https://unpkg.com/github-corners@latest/dist/embed.min.js")
 
         script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js")
+
+        link(href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet")
     body
         include project
 
-        div(data-isotope='{ "itemSelector": ".project", "masonry": { "gutter": 20 } }')#projectGroup
-            +Project("Rawky", "A pixel art editor.")
-            +Project("Logalizer", "A program to analyze generic log files.")
-            +Project("fishsuck", "It's a physics engine.")
+        div#sortbar
+            select(data-placeholder="Years" multiple=true)#years
+                option 2016
+                option 2017
+                option 2018
+                option 2019
+            select(data-placeholder="Languages" multiple=true)#langs
+                option Python
+                option Kotlin
+                option D
+                option Raku
+                option TypeScript
+
+        div#projectGroup
+            +Project("Rawky", "A pixel art editor.")("nine Kotlin")
+            +Project("Logalizer", "A program to analyze generic log files.")("nine TypeScript")
+            +Project("fishsuck", "It's a physics engine.")("nine D")

@@ -1,5 +1,5 @@
 mixin Project(name, description)
-    div.project
+    div(class!=attributes).project
         p.icon
         h3.name= name
         p.desc= description
