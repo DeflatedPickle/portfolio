@@ -1,6 +1,11 @@
 mixin Project(name, description, type)
     div(class!=attributes).project
-        p.icon
-        a(href="https://github.com/DeflatedPickle/" + name).name= name
-        p.desc= description
-        p.type=type
+        div.grid
+            p.icon
+            a(href="https://github.com/DeflatedPickle/" + name).name= name
+            p.desc= description
+            p.type= type
+        div.plate
+            div.content
+            div.expander
+                p.text

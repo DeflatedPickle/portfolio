@@ -1,76 +1,175 @@
 @require "colours"
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Nunito:600|Roboto:300|Calistoga&display=swap')
 
 .project {
-  position relative
-  display inline-grid
+  position absolute
 
-  grid-template-areas "icon name" "desc desc" "type type"
-  grid-template-rows 30px auto
-  grid-template-columns 20px auto
-  align-content stretch
+  display flex
 
-  background-color panel
+  flex-direction row
 
-  width 200px
-  height 300px
+  transition-timing-function: ease-in;
+  transition 0.2s
 
-  margin 2px
-  padding 4px
-
-  transition-timing-function: ease-out;
-  transition 0.25s
-
-  border-width 2px
-  border-color border
-  border-style solid
-
-  box-shadow 0 4px lowOpacityBlack
+  margin 6px
 
   &:hover {
     z-index 1
 
-    transition-timing-function: ease-in;
-    transition 0.2s
-
-    transform scale(1.08)
+    // transform scale(1.08)
   }
 
-  .icon {
-    grid-area icon
+  .expanded {
+    margin-left 200px
   }
 
-  .name {
-    font-family 'Nunito', sans-serif
-    font-size 24px
+  .grid {
+    position relative
+    display inline-grid
 
-    grid-area name
+    grid-template-areas "icon name" "desc desc" "type type"
+    grid-template-rows 30px auto 32px
+    grid-template-columns 20px auto
+    align-content stretch
 
-    justify-self center
-    align-self center
-  }
+    background-color panel
 
-  .desc {
-    font-family 'Roboto', sans-serif
-    grid-area desc
-  }
+    width 200px
+    height 300px
 
-  .type {
-    font-family 'Roboto', sans-serif
-    grid-area type
-
-    justify-self center
-    align-self center
-
-    background-color toolbar
-    text-align center
-
-    width 100%
-    margin 0
     padding 4px
 
-    position: absolute;
-    bottom: 0;
+    border-width 2px
+    border-color border
+    border-style solid
+
+    transition-timing-function: ease-out;
+    transition 0.25s
+
+    box-shadow 0 4px lowOpacityBlack
+
+    .icon {
+      grid-area icon
+    }
+
+    .name {
+      font-family 'Nunito', sans-serif
+      font-size 24px
+
+      grid-area name
+
+      justify-self center
+      align-self center
+    }
+
+    .desc {
+      font-family 'Roboto', sans-serif
+      grid-area desc
+    }
+
+    .type {
+      font-family 'Roboto', sans-serif
+      grid-area type
+
+      justify-self center
+      align-self center
+
+      background-color toolbar
+      text-align center
+
+      width 100%
+      margin 0
+      padding 4px 0 4px 0
+
+      position absolute
+      bottom 0
+    }
+  }
+
+  .plate {
+    // position absolute
+
+    display flex
+
+    flex-direction row
+
+    background-color border
+
+    // top 0
+    // right 0
+
+    z-index -1
+
+    box-shadow 0 4px lowOpacityBlack
+
+    .content {
+      width 0
+      height 304px
+
+      background-color toolbar
+
+      border-width 2px
+
+      transform-origin left
+
+      transition-timing-function: ease-in;
+      transition width 0.2s
+
+      &.visible {
+        width 200px
+
+        padding 4px
+      }
+    }
+
+    .expander {
+      display flex
+
+      background-color text
+
+      width 10px
+      height 308px
+
+      border-width 2px
+      border-color textVisited
+      border-style solid
+
+      flex-direction column
+
+      justify-content center
+      align-content center
+
+      padding 0 4px 0 4px
+
+      cursor pointer
+
+      box-shadow 0 4px lowOpacityBlack
+
+      transition-timing-function: ease-in;
+      transition 0.2s
+
+      &:hover, &.active {
+        background-color textHover
+        transform translateX(4px)
+      }
+
+      &:active {
+        background-color textVisited
+      }
+
+      .text {
+        font-family 'Calistoga', cursive
+        font-weight bold
+
+        text-align center
+
+        color white
+
+        text-shadow 0 2px lowOpacityBlack
+
+        margin 0
+      }
+    }
   }
 }
